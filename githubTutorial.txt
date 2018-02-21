@@ -1,0 +1,138 @@
+Github Tutorials
+
+Download Github File form this Link 
+https://git-scm.com/download/win
+
+you can download 32bit and 64 bit from here
+First Check the github is instal on your pc or not on command prompt
+github --version
+
+
+clear clear the screem of git
+
+---------------------Step One---------------------------------
+git init is intialze your git repository where you click the folder 
+
+---------------------Step two--------------------------------------------
+git remote add origin "link you find on your repository" first you have to identify the 
+git repository by given the link
+
+
+--------------for Pull From git--------------------------------
+--------git pull origin master--------- will pull changes from the origin remote, master branch and 
+merge them to the local checked-out branch.
+
+where as ---------git pull------ will fetch new commits from all tracked branches from the default remote(origin). 
+you can also configure default remote and branch name in gitconfig file.
+
+
+-----------git status-----------
+identify the file in your folder
+
+
+
+----------------How to push Code-------------------------
+------First Step----
+git status -->also idenfity which file is not added if it green mean your file is added
+if it red your file is not added
+
+------Second Step----
+git add   --->is use to add single file in your repositry and you have to identify
+name like <<<git add edu1.txt>>>>
+--->if you want to add multiple file at once you use git add -A
+
+-----Third Step-----
+git commit is give by command git comment -m >>>here -m mean "message"
+git commit -m "Programming is good"
+if you want to commit all file you use "git commit -a -m "Message" " 
+
+
+
+------------git log-------------------------
+Comment and file you add when show by git log
+
+
+
+
+------------------ls-------------
+it identify how many file in Branch
+
+
+----------------Parallel Development-------------------------
+"When you're working on a project, you're going to have a bunch of 
+different features or ideas in progress at any given time – some of 
+which are ready to go, and others which are not. Branching exists to 
+help you manage this workflow."
+
+When you create a branch in your project, you're creating an environment where you can try out new ideas. Changes you make on a branch don't affect the master branch, so you're free to experiment and commit changes, safe in the knowledge that your branch won't be merged until it's ready to be reviewed by someone you're collaborating with."
+Create multiple branch so multiple user can easily do there work 
+>>>>>>>>Creating a Branch<<<<<<<<<<<<<< 
+git branch firstBranch
+>>>>>>>>Checking if branch is creating<<<<<<<<<<<
+git checkout firstBranch
+Now we can do star working in first Branch and add file like previous did
+
+if you again want to go master than you write
+git checkout master
+
+
+
+----------------Merging------------------------------
+>It is a way to combine the work of different Branches together.
+>Allow to branch off,develop a new feature and conbine it back in.
+>it help if you create a changes and you think it affect the project you create
+a branch and if it succesful than you combine with master branch
+
+git merge firstBranch "it automatically connect first Branch with master Branch"
+you can see using >>>li<<<
+
+and then you again comment 
+
+>>>cat<<< identify that the file in master belong to which Branch
+cat test.txt
+
+
+----------------Rebasing------------------------------
+>This is also a way of combining the work b/w differnet branches.
+>is can be used to mae a linear sequence of commits.
+
+git checkout firstBranch
+
+--Now add every file in firstBranch--
+git add -A
+
+--Now you can do comment---
+git commit -a -m "type your message"
+
+
+--Now yo got on master  file--
+git checkout master
+
+--now List out all the file--
+ls
+
+--now again we go on firsbranch--
+git checkout firstBeanch--
+
+--now appy rebase so connect to master with firstbranch--
+git rebase master 
+
+
+
+
+
+>>>>>>>if you want to push int to git<<<<<<<<<
+
+first you generate ssh-keygen
+
+you can check you ssh key  by copy link from public key has been saved
+
+Now you go on setting and add ssh and GPG key in github 
+-give the name ssh key
+-copy ssh key and past it
+
+Now you write ssh -T git@github.com
+now authantication is complete
+
+git push origin firstbranch
+
